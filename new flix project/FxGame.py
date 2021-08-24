@@ -33,6 +33,7 @@ def initGame(r:float, g:float, b:float, width, hight):
     return(createdgame)
 
 # the numbers are rgb values they are the backround color
+# the first three are rgb the others is hight and width
 initGame(0, 0, 0, 640, 480)
 # run the start function
 gameStart()
