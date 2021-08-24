@@ -10,9 +10,10 @@ import pypresence
 import os 
 
 class main:
+    game = Game.initGame(0, 0, 0, 640, 480)
     def __init__(self):
-        Game.setWH(640, 480)
-        Game.initGame(0, 0, 0, 640, 480)
+        # when the game starts
+        pass
 
     while 1:
         pass #update
