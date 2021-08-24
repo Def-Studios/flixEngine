@@ -8,60 +8,50 @@ import json
 import pypresence
 import os 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-createdgame = pygame.init()
+
 #game setup noncence
 print(dir_path)
 with open(dir_path + "\gameinfo.json") as gameinfo:
   data = json.load(gameinfo)
 with open(dir_path + "/assets.json") as assetpath:
   assetPaths = json.load(assetpath)
-screen = pygame.display.set_mode((400,400))
-clock = pygame.time.Clock()
-font = pygame.font.SysFont("Arial", 18)
+
+def gameStart():
+  #do stuff here
+  pass
+
 gameName = data.get('name')
 gameVer = data.get('version')
-class Game:
-  with open(dir_path + "\gameinfo.json") as gameinfo:
-    data = json.load(gameinfo)
-  with open(dir_path + "/assets.json") as assetpath:
-    assetPaths = json.load(assetpath)
-  # ignore evrything from now on
-  gameName = data.get('name')
-  gameVer = data.get('version')
-  screen = pygame.display.set_mode((400,400))
-
-  def initGame(r:float, g:float, b:float, width, hight):
-      with open(dir_path + "\gameinfo.json") as gameinfo:
-        data = json.load(gameinfo)
-      with open(dir_path + "/assets.json") as assetpath:
-        assetPaths = json.load(assetpath)
-      createdgame = pygame.init()
-      gameName = data.get('name')
-      gameVer = data.get('version')
-      # varibles go here..
-      screen = pygame.display.set_mode((400,400))
-      clock = pygame.time.Clock()
-      font = pygame.font.SysFont("Arial", 18)
-      size = width, height = width, hight
-      screen = pygame.display.set_mode(size)
-      color = r, g, b
-      screen.fill(color)
-      pygame.display.set_caption(gameName)
-      print("game " + gameName + " version " + str(gameVer) + " created!")
-      return(pygame)
 
 
+def initGame(r:float, g:float, b:float, width, hight):
+    createdgame = pygame.init()
+    # varibles go here..
+    size = width, height = width, hight
+    screen = pygame.display.set_mode(size)
+    color = r, g, b
+    screen.fill(color)
+    pygame.display.set_caption(gameName)
+    print("game " + gameName + " version " + str(gameVer) + " created!")
+    return(createdgame)
+
+# the numbers are rgb values they are the backround color
+# the first three are rgb the others is hight and width
+initGame(0, 0, 0, 640, 480)
+# run the start function
+gameStart()
 
 while 1:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
            print("game " + gameName + " quit")
            sys.exit()
-
            
 
 def quitGame():
     sys.exit()
 
+# put ur code here now :)
+print("running users code")
 
 
