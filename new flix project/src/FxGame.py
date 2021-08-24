@@ -6,11 +6,14 @@ import sys
 import json
 # do it urself idk how to :(
 import pypresence
+import os 
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
 #game setup noncence
-with open('gameinfo.json') as gameinfo:
+print(dir_path)
+with open(dir_path + "\gameinfo.json") as gameinfo:
   data = json.load(gameinfo)
-with open('assets.json') as assetpath:
+with open(dir_path + "/assets.json") as assetpath:
   assetPaths = json.load(assetpath)
 
 def gameStart():
