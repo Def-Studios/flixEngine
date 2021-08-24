@@ -15,34 +15,41 @@ with open(dir_path + "\gameinfo.json") as gameinfo:
   data = json.load(gameinfo)
 with open(dir_path + "/assets.json") as assetpath:
   assetPaths = json.load(assetpath)
-
-  gameName = data.get('name')
-  gameVer = data.get('version')
-  inti = "0"
-class FxGame:
-  def initGame(r:float, g:float, b:float, width, hight):
-	    # varibles go here..
-      pygame.init()
-      inti = [1]
-      size = (width, hight)
-      screen = pygame.display.set_mode(size)
-      color = r, g, b
-      screen.fill(color)
-      pygame.display.set_caption(gameName)
-      print("game " + gameName + " version " + str(gameVer) + " created!")
-
-while 1:
-  if inti == "1":
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-           print("game " + gameName + " quit")
-           sys.exit()
-           
+gameName = data.get('name')
+gameVer = data.get('version')
 
 def quitGame():
-    sys.exit()
+	print("game " + gameName + " quit")
+	sys.exit()
 
-# put ur code here now :)
-print("running users code")
+
+class Game:
+	def initialised():
+		# wierd fix
+		return(False)
+	def initGame(r:float, g:float, b:float, width, hight):
+		createdgame = pygame.init()
+		# varibles go here..
+		size = width, height = width, hight
+		screen = pygame.display.set_mode(size)
+		color = r, g, b
+		screen.fill(color)
+		pygame.display.set_caption(gameName)
+		print("game " + gameName + " version " + str(gameVer) + " created!")
+		return(True)
+		
+
+	def exitGame():
+		quitGame()
+	def updateKeybinds():
+		# litrally makes no sense but works
+		gae = Game.initialised()
+		gae = True
+		if gae == True:
+			for event in pygame.event.get():
+				if event.type == pygame.QUIT:
+					Game.exitGame()
+
+
 
 

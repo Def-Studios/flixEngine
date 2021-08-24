@@ -1,5 +1,5 @@
 import pygame
-from FxGame import FxGame
+from FxGame import Game
 from FxTools import FxTools
 from pygame.locals import *
 import sys
@@ -10,8 +10,9 @@ import pypresence
 import os 
 
 class main:
+    gae = Game.initialised()
+    gae = Game.initGame(0, 0, 0, 640, 480)
     def __init__(self):
-        # init the game and create the window
-        FxGame.initGame(0, 0, 0, 640, 480)
+        pass #ran when game is loaded
     while 1:
-        pass #called every frame
+        Game.updateKeybinds()
