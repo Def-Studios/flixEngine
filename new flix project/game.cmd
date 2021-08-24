@@ -1,3 +1,3 @@
 @echo off
 title game
-py src/FxGame.py
+py src/main.py
