@@ -1,5 +1,7 @@
 # FLIX ENGINE
-### built using pygame
+### Built using pygame.
 
-run newflix to generate a new flix project
-dont delete the new flix project folder it contanes the project base that the script copies
+Run newflix to generate a new flix project.
+Dont delete the new flix project folder it contains the project base that the script copies.
+
+## You do NOT need python installed, because there is a python runtime in the src/runtime folder.
