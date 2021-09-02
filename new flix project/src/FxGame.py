@@ -1,3 +1,5 @@
+# ignore all this stuffffff
+
 import pygame
 from FxTools import FxTools
 from pygame.locals import *

@@ -1,5 +1,5 @@
 {
-    "images": "assets/images",
-    "data": "assets/data",
-    "audio": "assets/audio"
+    "images": "images",
+    "data": "data",
+    "audio": "audio"
 }
