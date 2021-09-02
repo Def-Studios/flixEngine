@@ -1,3 +1,7 @@
 @echo off
-title game
-py src/main.py
+
+set le=%CD%
+
+cd src/runtime
+
+py %le%/src/main.py
